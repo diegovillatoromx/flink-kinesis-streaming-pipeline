@@ -9,6 +9,7 @@ In the domain of Data Engineering within AWS, cryptocurrency data analytics invo
 
 - [Description](#description)
 - [Architecture](#architecture)
+- [Dataset](#Datset)
 - [Modular Code Overview](#modular-code-overview)
 - [To create an AWS Cloud9 environment](#To-create-an-AWS-Cloud9-environment)
 - [Cloning GitHub repository to AWS Cloud9](#Cloning-GitHub-repository-to-AWS-Cloud9)
@@ -28,6 +29,17 @@ By combining these AWS services and technologies, our aim is to create a robust 
 
 ## Architecture
 <img src='https://github.com/diegovillatoromx/Incremental_ETL_Pipeline/blob/main/images/etl-alpha.gif' alt="incremental_etl_alpha_api">
+
+## Dataset
+
+This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) dataset which includes a few of the following fields:
+- Severity
+- Start_Time
+- End_Time
+- Location
+- Description
+- City
+- State
 
 ### Methodology 
 First and foremost, we'll underscore the importance of avoiding the use of the root user for enhanced cloud security. Simultaneously, we'll initiate the creation of a new user responsible for establishing the entire architecture. In addition, we'll craft new roles, including those tailored for Lambda and AWS Glue, each meticulously configured with their requisite permissions.
