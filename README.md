@@ -10,6 +10,7 @@ Data Engineering AWS played a vital role in the process. The US-Accidents databa
 - [Description](#description)
 - [Architecture](#architecture)
 - [Dataset](#Datset)
+- [Methodology](#Methodology)
 - [Modular Code Overview](#modular-code-overview)
 - [To create an AWS Cloud9 environment](#To-create-an-AWS-Cloud9-environment)
 - [Cloning GitHub repository to AWS Cloud9](#Cloning-GitHub-repository-to-AWS-Cloud9)
@@ -28,7 +29,6 @@ Furthermore, Amazon Athena, a query service, will be used to analyze the transfo
 By combining these AWS services and technologies, our aim is to create a robust and scalable solution for cryptocurrency data analysis, enabling comprehensive data processing, transformation, and analysis.
 
 ## Architecture
-<img src='https://github.com/diegovillatoromx/Incremental_ETL_Pipeline/blob/main/images/etl-alpha.gif' alt="incremental_etl_alpha_api">
 
 ## Dataset
 
@@ -41,15 +41,4 @@ This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanm
 - City
 - State
 
-### Methodology 
-First and foremost, we'll underscore the importance of avoiding the use of the root user for enhanced cloud security. Simultaneously, we'll initiate the creation of a new user responsible for establishing the entire architecture. In addition, we'll craft new roles, including those tailored for Lambda and AWS Glue, each meticulously configured with their requisite permissions.
-<img src='https://github.com/diegovillatoromx/Incremental_ETL_Pipeline/blob/main/images/iam_user.gif' alt="iam_user.gif">
-
-Next, a Python script that fetches cryptocurrency exchange rate data from the Alpha Vantage API
-and stores it in an AWS Kinesis data stream.
-
-<img src='https://github.com/diegovillatoromx/Incremental_ETL_Pipeline/blob/main/images/data_production.gif' alt="lambda.gif">
-
-Then, a Python script that defines an AWS Lambda function for processing records from a Kinesis data stream and storing the transformed data in an Amazon DynamoDB table.
-<img src='https://github.com/diegovillatoromx/Incremental_ETL_Pipeline/blob/main/images/data_consumer.gif' alt="lambda.gif">
-
+## Methodology 
