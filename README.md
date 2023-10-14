@@ -29,7 +29,7 @@ Furthermore, Amazon Athena, a query service, will be used to analyze the transfo
 By combining these AWS services and technologies, our aim is to create a robust and scalable solution for cryptocurrency data analysis, enabling comprehensive data processing, transformation, and analysis.
 
 ## Architecture
-![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/architecure_diagram.png)
+![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/architecture.png)
 
 ## Dataset
 
