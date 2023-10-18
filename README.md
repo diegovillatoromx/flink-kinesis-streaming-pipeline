@@ -60,7 +60,7 @@ By combining these AWS services and technologies, our aim is to create a robust 
      * `County`
      * `Txn_Timestamp`
 
-**Create a table to store data from the 'us-accidents-data-stream-1' kinesis stream into the Glue database**
+***Create a table to store data from the 'us-accidents-data-stream-1' kinesis stream into the Glue database***
  ``` sql
 DROP TABLE IF EXISTS us_accidents_stream;
 CREATE TABLE us_accidents_stream (
@@ -84,7 +84,25 @@ WITH (
     'format' = 'json',
     'json.timestamp-format.standard' = 'ISO-8601'
 );
-
+```
+***Create a table to store only the selective columns and send it to 'us-accidents-data-stream-2'***
+```sql
+DROP TABLE IF EXISTS us_accidents_stream_1_results;
+CREATE TABLE us_accidents_stream_1_results (
+    `ID` VARCHAR(50),
+    `Severity` bigint,
+    `City` VARCHAR(50),
+    `County` VARCHAR(50),
+    `Txn_Timestamp` TIMESTAMP(3)
+)
+PARTITIONED BY (Severity)
+WITH (
+    'connector' = 'kinesis',
+    'stream' = 'us-accidents-data-stream-2',
+    'aws.region' = 'eu-west-1',
+    'format' = 'json',
+    'json.timestamp-format.standard' = 'ISO-8601'
+);
 ```
 
 ## Dataset
