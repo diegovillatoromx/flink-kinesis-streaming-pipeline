@@ -30,7 +30,7 @@ By combining these AWS services and technologies, our aim is to create a robust 
 
 ## Architecture
 
-![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/architecture.png)
+![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/architecture.png)
 
 ## Dataset
 
