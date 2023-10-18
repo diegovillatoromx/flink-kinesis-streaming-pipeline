@@ -124,6 +124,7 @@ WHERE Severity > 3;
 4. Push the metrics to CloudWatch with a `Severity > 2`
 5. Create Grafana Dashboard for visualizing the data points
 6. Setup Email Notifications through AWS SNS to manage `severity > 4`
+![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
 
 ## Dataset
 
