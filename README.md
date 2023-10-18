@@ -32,6 +32,22 @@ By combining these AWS services and technologies, our aim is to create a robust 
 
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/flink_kinesis.png)
 
+### Steps in Raw-Layer
+
+- Begin by creating an S3 bucket.
+- Establish a Data Stream named 'us-accidents-data-stream-1.'
+- Upload the RAW data file to the S3 bucket.
+- Configure a Cloud9 environment and execute the simulation code, which involves:
+  - Reading the file from the S3 bucket.
+  - Converting each row into JSON format.
+  - Typecasting strings into Datetime objects.
+  - Adding a Transaction Timestamp (Txn_Timestamp).
+  - Sending each data point to the 'us-accidents-data-stream-1.'
+ - Once the Analytical and Real-time Layers have been implemented, archive the Raw data to S3 as part of the Single Source of Truth (SSOT) process.
+
+![raw_layer](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/raw_layer.png)
+
+
 ## Dataset
 
 This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) dataset which includes a few of the following fields:
