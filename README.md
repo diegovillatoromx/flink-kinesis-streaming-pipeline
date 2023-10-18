@@ -114,6 +114,17 @@ WHERE Severity > 3;
 ```
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/analytic_layer.png)
 
+### Steps in Real-Time Layer
+1. Read the stream in Lambda and deaggregate the records using Kinesis Producer Library (KPL) (loop-in the generator to start receiving records)
+   ```terminal
+   pip install aws_kinesis_agg
+   ```
+2. Decode the data in Lambda as the event record data is `base64` encoded
+3. Create CloudWatch metrics for `‘Severity’`, `‘City’` and `‘County'`
+4. Push the metrics to CloudWatch with a `Severity > 2`
+5. Create Grafana Dashboard for visualizing the data points
+6. Setup Email Notifications through AWS SNS to manage `severity > 4`
+
 ## Dataset
 
 This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) dataset which includes a few of the following fields:
