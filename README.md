@@ -129,13 +129,13 @@ WHERE Severity > 3;
 ## Dataset
 
 This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) dataset which includes a few of the following fields:
-- Severity
-- Start_Time
-- End_Time
-- Location
-- Description
-- City
-- State
+- `severity`
+- `Start_Time`
+- `End_Time`
+- `Location`
+- `Description`
+- `City`
+- `State`
 
 ## Methodology 
 
