@@ -46,6 +46,19 @@ By combining these AWS services and technologies, our aim is to create a robust 
 
 ![raw_layer](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/raw_layer.png)
 
+### Steps in Analytical Layer
+1. Test the Flink application using the provided SQL or Python code.
+2. Build and deploy the Flink application in Kinesis Data Analytics (KDA).
+3. The Flink Application includes:
+   - Create a table in the Glue database and ingest the `'us-accidents-data-stream-1'` data via the Glue Catalog.
+   - Apply a watermark on `Txn_Timestamp` with a 5-second interval.
+   - Partition the data based on the `'Severity'` field.
+   - Create a second table for the Real-time layer by filtering the following fields and pushing them to `'us-accidents-data-stream-2'`:
+     * `ID`
+     * `Severity`
+     * `City`
+     * `County`
+     * `Txn_Timestamp`
 
 ## Dataset
 
