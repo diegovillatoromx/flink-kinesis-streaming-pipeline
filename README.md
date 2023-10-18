@@ -60,6 +60,7 @@ By combining these AWS services and technologies, our aim is to create a robust 
      * `County`
      * `Txn_Timestamp`
 
+**Create a table to store data from the 'us-accidents-data-stream-1' kinesis stream into the Glue database**
  ``` sql
 DROP TABLE IF EXISTS us_accidents_stream;
 CREATE TABLE us_accidents_stream (
