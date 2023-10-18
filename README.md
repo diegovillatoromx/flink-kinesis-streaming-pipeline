@@ -9,7 +9,7 @@ Data Engineering AWS played a vital role in the process. The US-Accidents databa
 
 - [Description](#description)
 - [Architecture](#architecture)
-- [Dataset](#Datset)
+- [Dataset](#Dataset)
 - [Methodology](#Methodology)
 - [Modular Code Overview](#modular-code-overview)
 - [To create an AWS Cloud9 environment](#To-create-an-AWS-Cloud9-environment)
@@ -103,3 +103,13 @@ the following command in the Cloud9 terminal:
    git clone git@github.com:username/repository.git
    ```
    Replace username with your GitHub username and repository with the name of the repository you want to clone.
+
+## Contribution
+  1. Focus changes on spec ific improvements.
+  2. Follow project's coding style.
+  3. Provide detailed descriptions in pull requests.
+## Reporting Issues
+  Use "Issues" to report bugs or suggest improvements.
+# Contact
+For questions or contact, my [Mail](diegovillatormx@gmail.com) or [Twitter](https://twitter.com/diegovillatomx). 
+
