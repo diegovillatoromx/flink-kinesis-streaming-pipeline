@@ -105,6 +105,13 @@ WITH (
 );
 ```
 ***Send only the selective data from 'us_accidents_stream' table to `'us_accidents_stream_1_results'` table***
+
+```sql
+INSERT INTO us_accidents_stream_1_result6
+SELECT ID, Severity, City, County, Txn_Timestamp
+FROM us_accidents_stream
+WHERE Severity > 3;
+```
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/analytic_layer.png)
 
 ## Dataset
