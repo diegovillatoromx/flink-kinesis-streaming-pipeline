@@ -60,6 +60,32 @@ By combining these AWS services and technologies, our aim is to create a robust 
      * `County`
      * `Txn_Timestamp`
 
+ ``` sql
+DROP TABLE IF EXISTS us_accidents_stream;
+CREATE TABLE us_accidents_stream (
+    `ID` VARCHAR(50),
+    `Severity` bigint,
+    `Start_Time` TIMESTAMP(3),
+    `End_Time` TIMESTAMP(3),
+    -- Other columns ...
+    `City` VARCHAR(50),
+    `County` VARCHAR(50),
+    -- Other columns ...
+    `Txn_Timestamp` TIMESTAMP(3),
+    WATERMARK FOR Txn_Timestamp as Txn_Timestamp - INTERVAL '5' SECOND
+)
+PARTITIONED BY (Severity)
+WITH (
+    'connector' = 'kinesis',
+    'stream' = 'us-accidents-data-stream-1',
+    'aws.region' = 'eu-west-1',
+    'scan.stream.initpos' = 'LATEST',
+    'format' = 'json',
+    'json.timestamp-format.standard' = 'ISO-8601'
+);
+
+```
+
 ## Dataset
 
 This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) dataset which includes a few of the following fields:
