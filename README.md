@@ -60,7 +60,7 @@ By combining these AWS services and technologies, our aim is to create a robust 
      * `County`
      * `Txn_Timestamp`
 
-***Create a table to store data from the 'us-accidents-data-stream-1' kinesis stream into the Glue database***
+***Create a table to store data from the `'us-accidents-data-stream-1'` kinesis stream into the Glue database***
  ``` sql
 DROP TABLE IF EXISTS us_accidents_stream;
 CREATE TABLE us_accidents_stream (
@@ -85,7 +85,7 @@ WITH (
     'json.timestamp-format.standard' = 'ISO-8601'
 );
 ```
-***Create a table to store only the selective columns and send it to 'us-accidents-data-stream-2'***
+***Create a table to store only the selective columns and send it to `'us-accidents-data-stream-2'`***
 ```sql
 DROP TABLE IF EXISTS us_accidents_stream_1_results;
 CREATE TABLE us_accidents_stream_1_results (
@@ -104,6 +104,8 @@ WITH (
     'json.timestamp-format.standard' = 'ISO-8601'
 );
 ```
+***Send only the selective data from 'us_accidents_stream' table to `'us_accidents_stream_1_results'` table***
+![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/analytic_layer.png)
 
 ## Dataset
 
