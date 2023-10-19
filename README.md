@@ -44,8 +44,9 @@ You can use the AWS Command Line Interface (CLI) to upload the file to the S3 bu
 ```terminal
 aws s3 cp <local-file-path> s3://us-accidents-raw-us_east_1-dev/
 ```
+Make sure to replace `<local-file-path>` with the actual path to the downloaded dataset on your local machine. Once the file is copied to the S3 bucket, it will be accessible for further data processing and analysis within our AWS environment.
 
-which includes a few of the following fields:
+The dataset encompasses a range of variables, but our primary focus lies on a specific set of variables. These variables are designed to be utilized in real-time to feed our Python-based simulator. This simulator, in turn, will feed data into the Kinesis streaming service, enabling us to conduct real-time processing and analysis. The variables we will concentrate on and subsequently transform using Kinesis Analytics are as follows:
 - `severity`
 - `Start_Time`
 - `End_Time`
