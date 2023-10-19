@@ -152,6 +152,7 @@ WHERE Severity > 3;
 6. Setup Email Notifications through AWS SNS to manage `severity > 4`
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
 
+## Modular Code Overview
 
 ## Creating an AWS Cloud9 Environment
 
