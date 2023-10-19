@@ -153,30 +153,44 @@ WHERE Severity > 3;
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
 
 
-## Creating an AWS Cloud9 environment
- 
-Below are the steps required to set up the environment and run this Data engineering project on cloud9 on aws.
+## Creating an AWS Cloud9 Environment
+
+Below are the steps required to set up the environment and run this Data Engineering project on Cloud9 on AWS.
+
 To create an AWS Cloud9 environment, you can follow these steps:
 
-1. Open the AWS Management Console: Go to the AWS Management Console (https://console.aws.amazon.com) and sign in to your AWS account.
-2. Navigate to Cloud9: Use the AWS services search bar or navigate to the "Developer Tools" category and select "Cloud9."
-3. Click "Create environment": On the Cloud9 dashboard, click the "Create environment" button.
-4. Provide environment details:
- - Enter a name for your environment. Optionally, enter a description.
- - Choose the environment type (new or clone an existing environment).
- - Select the instance type based on your requirements.
- - Choose the platform (Amazon Linux 2 or Ubuntu).
-5. Configure settings:
- - Choose the network settings (either create a new Amazon VPC or use an existing one).
- - Select the subnet for your environment.
- - Choose the IAM role that Cloud9 will use to access AWS resources on your behalf.
- - Configure additional settings as needed.
-6. Review and create:
- - Review the configuration details.
- - Enable the option to create an AWS CloudFormation stack if desired.
- - Click "Create environment" to start the provisioning process.
-7. Wait for the environment to be created: The Cloud9 environment creation process may take a few minutes. You can monitor the progress on the Cloud9 dashboard.
-8. Access the Cloud9 IDE: Once the environment is created, you can click on its name in the Cloud9 dashboard to access the Cloud9 integrated development environment (IDE) in your web browser.
+1. **Open the AWS Management Console:**
+   - Go to the AWS Management Console at [https://console.aws.amazon.com](https://console.aws.amazon.com) and sign in to your AWS account.
+
+2. **Navigate to Cloud9:**
+   - Use the AWS services search bar or navigate to the "Developer Tools" category and select "Cloud9."
+
+3. **Click "Create Environment":**
+   - On the Cloud9 dashboard, click the "Create environment" button.
+
+4. **Provide Environment Details:**
+   - Enter a name for your environment. Optionally, enter a description.
+   - Choose the environment type (new or clone an existing environment).
+   - Select the instance type based on your requirements.
+   - Choose the platform (Amazon Linux 2 or Ubuntu).
+
+5. **Configure Settings:**
+   - Choose the network settings (either create a new Amazon VPC or use an existing one).
+   - Select the subnet for your environment.
+   - Choose the IAM role that Cloud9 will use to access AWS resources on your behalf.
+   - Configure additional settings as needed.
+
+6. **Review and Create:**
+   - Review the configuration details.
+   - Enable the option to create an AWS CloudFormation stack if desired.
+   - Click "Create environment" to start the provisioning process.
+
+7. **Wait for the Environment to be Created:**
+   - The Cloud9 environment creation process may take a few minutes. You can monitor the progress on the Cloud9 dashboard.
+
+8. **Access the Cloud9 IDE:**
+   - Once the environment is created, you can click on its name in the Cloud9 dashboard to access the Cloud9 Integrated Development Environment (IDE) in your web browser.
+
 
 ## Setting up the enviroment
 
