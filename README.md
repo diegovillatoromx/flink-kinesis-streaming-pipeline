@@ -38,8 +38,12 @@ The dataset [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-
 ```bash
 kaggle datasets download -d sobhanmoosavi/us-accidents
 ```
+In order to make this dataset accessible within our AWS environment, it's necessary to copy the downloaded file from your local machine to an S3 bucket. We have a specific S3 bucket named `'us-accidents-raw-us_east_1-dev'` that has been created for this purpose.
 
-
+You can use the AWS Command Line Interface (CLI) to upload the file to the S3 bucket with the following command:
+```terminal
+aws s3 cp <local-file-path> s3://us-accidents-raw-us_east_1-dev/
+```
 
 which includes a few of the following fields:
 - `severity`
