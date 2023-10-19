@@ -179,7 +179,7 @@ command in your Cloud9 terminal:
    ssh-keygen -t rsa -b 4096 -C "Your GitHub Email"
    ```
 4. View and copy the public key: Run the following command to display your public key:
-   ```bash
+   ```terminal
    cat ~/.ssh/id_rsa.pub
    ```
    Copy the entire contents of the public key that is displayed in the terminal.
@@ -188,7 +188,7 @@ command in your Cloud9 terminal:
 and click "Add SSH key."
 6. Test the connection: To test if the SSH connection between Cloud9 and GitHub is successful, run
 the following command in the Cloud9 terminal:
-   ```bash
+   ```terminal
    ssh -T git@github.com
    ```
    You should see a success message indicating that you've successfully authenticated with GitHub.
