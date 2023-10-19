@@ -32,6 +32,19 @@ By combining these AWS services and technologies, our aim is to create a robust 
 
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/flink_kinesis.png)
 
+## Dataset
+
+This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) dataset which includes a few of the following fields:
+- `severity`
+- `Start_Time`
+- `End_Time`
+- `Location`
+- `Description`
+- `City`
+- `State`
+
+## Methodology 
+
 ### Steps in Raw-Layer
 1. Create an S3 bucket.
 2. Upload the RAW data file to S3.
@@ -126,18 +139,6 @@ WHERE Severity > 3;
 6. Setup Email Notifications through AWS SNS to manage `severity > 4`
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
 
-## Dataset
-
-This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) dataset which includes a few of the following fields:
-- `severity`
-- `Start_Time`
-- `End_Time`
-- `Location`
-- `Description`
-- `City`
-- `State`
-
-## Methodology 
 
 ## To create an AWS Cloud9 environment
  
