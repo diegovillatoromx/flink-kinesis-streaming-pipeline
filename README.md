@@ -13,6 +13,7 @@ Data Engineering AWS played a vital role in the process. The US-Accidents databa
 - [Methodology](#Methodology)
 - [Modular Code Overview](#modular-code-overview)
 - [To create an AWS Cloud9 environment](#To-create-an-AWS-Cloud9-environment)
+- [Setting up the enviroment](setting-up-the-enviroment)
 - [Cloning GitHub repository to AWS Cloud9](#Cloning-GitHub-repository-to-AWS-Cloud9)
 - [Usage](#usage) 
 - [Contribution](#contribution)
