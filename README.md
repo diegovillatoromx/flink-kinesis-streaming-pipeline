@@ -153,7 +153,36 @@ WHERE Severity > 3;
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
 
 ## Modular Code Overview
+This project is organized into modules and includes various code files and scripts to support its functionality. 
 
+```
+  📂 crypto_incremental_pipeline
+    |_📂 kinesis_stream
+    |  |_📜 kinesis_stream_stack.py
+    |_📂 data_producer
+    |  |_📜 data_producer_stack.py
+    |_📂 data_consumer
+    |  |_📜 data_consumer_stack.py
+    |_📂 lambda
+    |  |_📜 data_consumer_lambda.py
+    |  |_📜 data_producer_lambda.py
+    |_📂 s3_bucket
+    |  |_📜 s3_bucket_stack.py
+    |_📂 scripts
+    |  |_📜 CryptoHourlyETLJob.py
+    |  |_📜 flink_script.sql
+    |_📂 tests
+    |  |_📜 __init__.py
+    |  |_📂 unit
+    |    |_📜 __init__.py
+    |    |_📜 test_crypto_incremental_pipeline_stack.py
+    | 📜 app.py
+    | 📜 cdk.json 
+    | 📜 requirements-dev.txt 
+    | 📜 requirements.txt  
+    | 📜 source.bat
+```
+Refer to each module's respective directory and stack file for more details on their implementation.
 ## Creating an AWS Cloud9 Environment
 
 Below are the steps required to set up the environment and run this Data Engineering project on Cloud9 on AWS.
