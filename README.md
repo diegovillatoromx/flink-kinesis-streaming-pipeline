@@ -12,7 +12,7 @@ Data Engineering AWS played a vital role in the process. The US-Accidents databa
 - [Dataset](#Dataset)
 - [Methodology](#Methodology)
 - [Modular Code Overview](#modular-code-overview)
-- [To create an AWS Cloud9 environment](#To-create-an-AWS-Cloud9-environment)
+- [Creating an AWS Cloud9 environment](#creating-an-AWS-Cloud9-environment)
 - [Setting up the enviroment](setting-up-the-enviroment)
 - [Cloning GitHub repository to AWS Cloud9](#Cloning-GitHub-repository-to-AWS-Cloud9)
 - [Usage](#usage) 
@@ -153,7 +153,7 @@ WHERE Severity > 3;
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
 
 
-## To create an AWS Cloud9 environment
+## Creating an AWS Cloud9 environment
  
 Below are the steps required to set up the environment and run this Data engineering project on cloud9 on aws.
 To create an AWS Cloud9 environment, you can follow these steps:
@@ -177,6 +177,8 @@ To create an AWS Cloud9 environment, you can follow these steps:
  - Click "Create environment" to start the provisioning process.
 7. Wait for the environment to be created: The Cloud9 environment creation process may take a few minutes. You can monitor the progress on the Cloud9 dashboard.
 8. Access the Cloud9 IDE: Once the environment is created, you can click on its name in the Cloud9 dashboard to access the Cloud9 integrated development environment (IDE) in your web browser.
+
+## Setting up the enviroment
 
 ## Cloning GitHub repository to AWS Cloud9 
 
