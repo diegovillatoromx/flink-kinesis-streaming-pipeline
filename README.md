@@ -34,7 +34,14 @@ By combining these AWS services and technologies, our aim is to create a robust 
 
 ## Dataset
 
-This Project uses the [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) dataset which includes a few of the following fields:
+The dataset [US car accidents](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) is available for download either from Kaggle or directly through the terminal. To obtain it, you can use the following command in your terminal:  
+```bash
+kaggle datasets download -d sobhanmoosavi/us-accidents
+```
+
+
+
+which includes a few of the following fields:
 - `severity`
 - `Start_Time`
 - `End_Time`
