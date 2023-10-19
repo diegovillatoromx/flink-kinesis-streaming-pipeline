@@ -192,7 +192,82 @@ To create an AWS Cloud9 environment, you can follow these steps:
    - Once the environment is created, you can click on its name in the Cloud9 dashboard to access the Cloud9 Integrated Development Environment (IDE) in your web browser.
 
 
-## Setting up the enviroment
+## Setting up AWS CDK Environment
+
+Follow these steps to set up your environment for AWS CDK (Cloud Development Kit) in Python:
+
+1. **Install AWS CDK library:**
+    - To install the AWS CDK library, run the following command:
+    ```bash
+    pip install aws-cdk-lib
+    ```
+    This installs the AWS CDK library, which is essential for AWS CDK development.
+
+2. **Check CDK version:**
+    - To verify the installed AWS CDK version, run the following command:
+    ```bash
+    cdk --version
+    ```
+    This command will display the current AWS CDK version.
+
+3. **Create a directory:**
+    - Create a new directory by running:
+    ```bash
+    mkdir directory_name
+    ```
+    This creates a directory with the name you choose.
+
+4. **Navigate to the directory:**
+    - Change to the newly created directory using the command:
+    ```bash
+    cd directory_name/
+    ```
+    This takes you to the directory you just created.
+
+5. **List files and directories:**
+    - You can list the files and directories in the current directory with:
+    ```bash
+    ls
+    ```
+    This command will show you a list of items in the current directory.
+
+6. **Initialize a Python CDK app:**
+    - To initialize a Python AWS CDK app, use the command:
+    ```bash
+    cdk init app --language python
+    ```
+    This sets up a Python AWS CDK project in the current directory.
+
+7. **Activate the virtual environment:**
+    - Activate a virtual environment (assuming you already have one set up) with:
+    ```bash
+    source .venv/bin/activate
+    ```
+    This activates the virtual environment, isolating project dependencies.
+
+8. **Install project dependencies:**
+    - To install project dependencies, use:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    This installs the libraries specified in the `requirements.txt` file.
+
+9. **Install boto3 library:**
+    - Boto3 is an AWS SDK for Python. Install it with:
+    ```bash
+    pip install boto3
+    ```
+    This installs Boto3, enabling AWS service interaction in your project.
+
+10. **Install python-decouple library:**
+    - To install the python-decouple library, run:
+    ```bash
+    pip install python_decouple
+    ```
+    This installs the library for working with configuration files in your project.
+
+These steps are designed to help you set up your development environment for AWS CDK in Python.
+
 
 ## Cloning GitHub repository to AWS Cloud9 
 
