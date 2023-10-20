@@ -228,70 +228,70 @@ Follow these steps to set up your environment for AWS CDK (Cloud Development Kit
 
 1. **Install AWS CDK library:**
     - To install the AWS CDK library, run the following command:
-    ```bash
+    ```terminal
     python -m install aws-cdk-lib
     ```
     This installs the AWS CDK library, which is essential for AWS CDK development.
 
 2. **Check CDK version:**
     - To verify the installed AWS CDK version, run the following command:
-    ```bash
+    ```terminal
     cdk --version
     ```
     This command will display the current AWS CDK version.
 
 3. **Create a directory:**
     - Create a new directory by running:
-    ```bash
+    ```terminal
     mkdir directory_name
     ```
     This creates a directory with the name you choose.
 
 4. **Navigate to the directory:**
     - Change to the newly created directory using the command:
-    ```bash
+    ```terminal
     cd directory_name/
     ```
     This takes you to the directory you just created.
 
 5. **List files and directories:**
     - You can list the files and directories in the current directory with:
-    ```bash
+    ```terminal
     ls
     ```
     This command will show you a list of items in the current directory.
 
 6. **Initialize a Python CDK app:**
     - To initialize a Python AWS CDK app, use the command:
-    ```bash
+    ```terminal
     cdk init app --language python
     ```
     This sets up a Python AWS CDK project in the current directory.
 
 7. **Activate the virtual environment:**
     - Activate a virtual environment (assuming you already have one set up) with:
-    ```bash
+    ```terminal
     source .venv/bin/activate
     ```
     This activates the virtual environment, isolating project dependencies.
 
 8. **Install project dependencies:**
     - To install project dependencies, use:
-    ```bash
+    ```terminal
     pip install -r requirements.txt
     ```
     This installs the libraries specified in the `requirements.txt` file.
 
 9. **Install boto3 library:**
     - Boto3 is an AWS SDK for Python. Install it with:
-    ```bash
+    ```terminal
     pip install boto3
     ```
     This installs Boto3, enabling AWS service interaction in your project.
 
 10. **Install python-decouple library:**
     - To install the python-decouple library, run:
-    ```bash
+    ```terminal
     pip install python_decouple
     ```
     This installs the library for working with configuration files in your project.
