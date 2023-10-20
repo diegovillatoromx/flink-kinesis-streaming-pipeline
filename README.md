@@ -229,7 +229,7 @@ Follow these steps to set up your environment for AWS CDK (Cloud Development Kit
 1. **Install AWS CDK library:**
     - To install the AWS CDK library, run the following command:
     ```bash
-    pip install aws-cdk-lib
+    python -m install aws-cdk-lib
     ```
     This installs the AWS CDK library, which is essential for AWS CDK development.
 
