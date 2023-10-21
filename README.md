@@ -183,6 +183,7 @@ This project is organized into modules and includes various code files and scrip
     | 📜 source.bat
 ```
 Refer to each module's respective directory and stack file for more details on their implementation.
+
 ## Creating an AWS Cloud9 Environment
 
 Below are the steps required to set up the environment and run this Data Engineering project on Cloud9 on AWS.
