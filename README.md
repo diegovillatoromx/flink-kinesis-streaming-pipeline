@@ -335,11 +335,13 @@ the following command in the Cloud9 terminal:
    Replace username with your GitHub username and repository with the name of the repository you want to clone.
 
 ## Contribution
-  1. Focus changes on spec ific improvements.
+  1. Focus changes on specific improvements.
   2. Follow project's coding style.
   3. Provide detailed descriptions in pull requests.
+     
 ## Reporting Issues
   Use "Issues" to report bugs or suggest improvements.
+  
 # Contact
 For questions or contact, my [Mail](diegovillatormx@gmail.com) or [Twitter](https://twitter.com/diegovillatomx). 
 
