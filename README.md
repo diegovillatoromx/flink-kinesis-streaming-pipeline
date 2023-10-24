@@ -59,7 +59,7 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
 
 ### Steps in Raw-Layer
 1. Create an S3 bucket.
-2. Upload the RAW data file to S3.
+2. Upload the RAW data file to S3. 
 3. Create a Data Stream named `us-accidents-data-stream-1`.
 4. Setup a Cloud9 environment and run the simulation Code:
    - Read the file from S3.
