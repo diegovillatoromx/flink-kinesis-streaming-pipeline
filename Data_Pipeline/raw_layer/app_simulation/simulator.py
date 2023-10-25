@@ -4,16 +4,18 @@ import json
 import dateutil.parser as parser
 from time import sleep
 from datetime import datetime
-
-# AWS Settings
-s3 = boto3.client('s3', region_name = 'eu-west-1')
-s3_resource = boto3.resource('s3', region_name = 'eu-west-1')
-kinesis_client = boto3.client('kinesis', region_name='eu-west-1')
+from decouple import config
 
 # Env. variables; i.e. can be OS variables in Lambda
-PRIMARY_BUCKET_NAME = config("PRIMARY_BUCKET_NAME")
-INTRADAY_STREAM_NAME = config("INTRADAY_STREAM_NAME")
+DATASET_BUCKET_NAME = config('DATASET_BUCKET_NAME')
+FIRST_STREAM_NAME = config('FIRST_STREAM_NAME')
+REGION_NAME = config('REGION_NAME')
+streaming_partition_key = config('partition_key')
 
+# AWS Settings
+s3 = boto3.client('s3', region_name = REGION_NAME)
+s3_resource = boto3.resource('s3', region_name = REGION_NAME)
+kinesis_client = boto3.client('kinesis', region_name= REGION_NAME)
 
 # Function can be converted to Lambda; 
 #   i.e. by iterating the S3-put events records; e.g. record['s3']['bucket']['name']
@@ -49,7 +51,7 @@ def stream_data_simulator(input_s3_bucket, input_s3_key):
           json_load['Txn_Timestamp'] = datetime.now().isoformat()
           
           # Write to Kinesis Streams:
-          response = kinesis_client.put_record(StreamName=INTRADAY_STREAM_NAME,Data=json.dumps(json_load, indent=4),PartitionKey=str(json_load[streaming_partition_key]))
+          response = kinesis_client.put_record(StreamName=FIRST_STREAM_NAME,Data=json.dumps(json_load, indent=4),PartitionKey =str(json_load[streaming_partition_key]))
           print(response)
           
           # Adding a temporary pause, for demo-purposes:
@@ -60,4 +62,4 @@ def stream_data_simulator(input_s3_bucket, input_s3_key):
 
 # Run stream:
 for i in range(0, 3):
-  stream_data_simulator(input_s3_bucket="us-accidents-raw-euwest1-143176-dev", input_s3_key="raw_us_accidents_sample/US_Accidents_Dec20_updated_sample.csv")
+  stream_data_simulator(input_s3_bucket="us-accidents-raw-useast-731613642368-dev", input_s3_key="raw_us_accidents/US_Accidents_dataset.csv")
