@@ -221,7 +221,7 @@ To create an AWS Cloud9 environment, you can follow these steps:
 
 8. **Access the Cloud9 IDE:**
    - Once the environment is created, you can click on its name in the Cloud9 dashboard to access the Cloud9 Integrated Development Environment (IDE) in your web browser.
-
+ 
 ## Adding Policies to the Associated EC2 Instance
 
 To enable a Python simulator to extract data from an S3 bucket and send it to a Kinesis stream, you need to add the following policies to the IAM role associated with the EC2 instance:
