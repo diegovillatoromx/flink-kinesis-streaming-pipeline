@@ -5,7 +5,6 @@ import dateutil.parser as parser
 from time import sleep
 from datetime import datetime
 
-
 # AWS Settings
 s3 = boto3.client('s3', region_name = 'eu-west-1')
 s3_resource = boto3.resource('s3', region_name = 'eu-west-1')
