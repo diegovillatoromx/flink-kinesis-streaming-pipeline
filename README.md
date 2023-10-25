@@ -221,7 +221,7 @@ To create an AWS Cloud9 environment, you can follow these steps:
 8. **Access the Cloud9 IDE:**
    - Once the environment is created, you can click on its name in the Cloud9 dashboard to access the Cloud9 Integrated Development Environment (IDE) in your web browser.
 
-## xzx
+## Adding policies to the IAM role associated with your EC2 instance
 
 ## Setting up AWS CDK Environment
 
