@@ -161,8 +161,6 @@ This project is organized into modules and includes various code files and scrip
     |  |_📜 kinesis_stream_stack.py
     |_📂 data_producer
     |  |_📜 data_producer_stack.py
-    |_📂 data_consumer
-    |  |_📜 data_consumer_stack.py
     |_📂 lambda
     |  |_📜 data_consumer_lambda.py
     |_📂 s3_bucket
