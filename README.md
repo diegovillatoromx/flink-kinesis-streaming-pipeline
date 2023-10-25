@@ -12,7 +12,7 @@ Data Engineering AWS played a vital role in the process. The US-Accidents databa
 - [Methodology](#Methodology)
 - [Modular Code Overview](#modular-code-overview)
 - [Creating an AWS Cloud9 environment](#creating-an-AWS-Cloud9-environment)
-- [Adding policies to the IAM role associated with your EC2 instance](#Adding-policies-to-the-IAM-role-associated-with-your-EC2-instance)
+- [Adding Policies to the Associated EC2 Instance](#Adding-Policies-to-the-Associated-EC2-Instance)
 - [Setting up the enviroment](#setting-up-the-enviroment)
 - [Cloning GitHub repository to AWS Cloud9](#Cloning-GitHub-repository-to-AWS-Cloud9)
 - [Usage](#usage) 
@@ -222,7 +222,47 @@ To create an AWS Cloud9 environment, you can follow these steps:
 8. **Access the Cloud9 IDE:**
    - Once the environment is created, you can click on its name in the Cloud9 dashboard to access the Cloud9 Integrated Development Environment (IDE) in your web browser.
 
-## Adding policies to the IAM role associated with your EC2 instance
+## Associate an EC2 Instance with Your Cloud9 Environment
+
+Before adding the necessary policies, you need to identify the EC2 instance associated with your Cloud9 environment. This EC2 instance is the target for adding the required IAM policies.
+
+1. **Sign in to AWS Console**: Go to the [AWS Console](https://aws.amazon.com/console/), sign in to your account, and select the region where your Cloud9 environment is located.
+
+2. **Open the Cloud9 Service**: In the AWS Console, search for and select the "Cloud9" service.
+
+3. **Select Your Environment**: In the Cloud9 dashboard, select the Cloud9 environment you want to associate with the EC2 instance.
+
+4. **View Environment Details**: Inside your Cloud9 environment, go to "Environment" in the menu and select "View Environment Details." This page displays information about your environment.
+
+5. **Note the EC2 Instance ID**: In the "Environment details" page, you will find information about your environment, including the "Amazon EC2 instance ID." Note down this instance ID.
+
+## Adding Policies to the Associated EC2 Instance
+
+To enable a Python simulator to extract data from an S3 bucket and send it to a Kinesis stream, you need to add the following policies to the IAM role associated with the EC2 instance:
+
+1. **Sign in to AWS Console**: Go to the [AWS Console](https://aws.amazon.com/console/), sign in to your account, and select the region where your EC2 instance is located.
+
+2. **Open the IAM Service**: In the AWS Console, search and select the "IAM" (Identity and Access Management) service.
+
+3. **Navigate to Roles**: In the left navigation pane, select "Roles" under "Access management."
+
+4. **Find the Role Associated with Your EC2 Instance**: Locate the IAM role associated with your EC2 instance by selecting the relevant role from the list.
+
+5. **Add Policies**: Once you are on the IAM role's details page, you can add the following policies to the role to grant permissions to the EC2 instance:
+
+   a. In the "Permissions" section, select the "Add policies" button.
+
+   b. Search for and select the following policies:
+      - AmazonS3FullAccess
+      - AmazonKinesisFullAccess
+
+   c. Once you have selected the desired policies, click "Next: Review policy."
+
+   d. Review and confirm the selected policies, and click "Add permissions."
+
+6. **Confirm Changes**: Ensure you review and confirm the changes to the IAM role. You can add more policies if needed.
+
+7. **Assign the IAM Role to Your EC2 Instance**: Make sure your EC2 instance is configured to use the IAM role you just modified. This is typically done when launching the EC2 instance or modifying the IAM role associated with an existing instance from the EC2 console.
 
 ## Setting up AWS CDK Environment
 
