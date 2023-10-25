@@ -10,7 +10,6 @@ s3 = boto3.client('s3', region_name = 'eu-west-1')
 s3_resource = boto3.resource('s3', region_name = 'eu-west-1')
 kinesis_client = boto3.client('kinesis', region_name='eu-west-1')
 
-
 # Env. variables; i.e. can be OS variables in Lambda
 PRIMARY_BUCKET_NAME = config("PRIMARY_BUCKET_NAME")
 INTRADAY_STREAM_NAME = config("INTRADAY_STREAM_NAME")
