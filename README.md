@@ -222,20 +222,6 @@ To create an AWS Cloud9 environment, you can follow these steps:
 8. **Access the Cloud9 IDE:**
    - Once the environment is created, you can click on its name in the Cloud9 dashboard to access the Cloud9 Integrated Development Environment (IDE) in your web browser.
 
-## Associate an EC2 Instance with Your Cloud9 Environment
-
-Before adding the necessary policies, you need to identify the EC2 instance associated with your Cloud9 environment. This EC2 instance is the target for adding the required IAM policies.
-
-1. **Sign in to AWS Console**: Go to the [AWS Console](https://aws.amazon.com/console/), sign in to your account, and select the region where your Cloud9 environment is located.
-
-2. **Open the Cloud9 Service**: In the AWS Console, search for and select the "Cloud9" service.
-
-3. **Select Your Environment**: In the Cloud9 dashboard, select the Cloud9 environment you want to associate with the EC2 instance.
-
-4. **View Environment Details**: Inside your Cloud9 environment, go to "Environment" in the menu and select "View Environment Details." This page displays information about your environment.
-
-5. **Note the EC2 Instance ID**: In the "Environment details" page, you will find information about your environment, including the "Amazon EC2 instance ID." Note down this instance ID.
-
 ## Adding Policies to the Associated EC2 Instance
 
 To enable a Python simulator to extract data from an S3 bucket and send it to a Kinesis stream, you need to add the following policies to the IAM role associated with the EC2 instance:
