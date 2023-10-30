@@ -86,7 +86,7 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
    - Typecast strings to Datetime objects.
    - Add a Transaction Timestamp (`Txn_Timestamp`).
    - Push each data point to `us-accidents-data-stream-1`.
-6. After implementing the Analytical and Real-time Layer, archive the Raw data to S3 as part of the Single Source of Truth (SSOT) process.
+6. After implementing the Analytical and Real-time Layer, archive the Raw data to S3 as part of the [Single Source Of Truth](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/Coding/app-simulation.py) (SSOT) process.
 
 
 ### Steps in Analytical Layer
