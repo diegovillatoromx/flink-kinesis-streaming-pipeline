@@ -127,6 +127,11 @@ As part of our data processing architecture, we have configured a database in AW
 - Define the name of the database as `'db_streaming_datapipeline'`, which is descriptive and related to the project.
 
 
+#### Creating an Amazon Kinesis Analytics Job for Data Transformation
+
+As part of our real-time data processing architecture, we are setting up an Amazon Kinesis Analytics job to transform data from the first Kinesis data stream (`'us-accidents-data-stream-1'`) to the second Kinesis data stream (`'us-accidents-data-stream-2'`). This job will play a crucial role in processing and enriching data on-the-fly. Here are the steps to create this Kinesis Analytics job:
+
+
 
 1. Test the Flink application using the provided SQL or Python code.
 2. Build and deploy the Flink application in Kinesis Data Analytics (KDA).
