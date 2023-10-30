@@ -57,8 +57,9 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
 - `State`
 
 ## Methodology 
-![raw_layer](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/raw_layer.png)
 ### Steps in Raw-Layer
+
+![raw_layer](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/raw_layer.png)
 1. Creating an S3 bucket with the dataset
    ```
    📂 us-accidents-dataset-useast1-dev
