@@ -57,7 +57,7 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
 - `State`
 
 ## Methodology 
-
+![raw_layer](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/raw_layer.png)
 ### Steps in Raw-Layer
 1. Creating an S3 bucket with the dataset
    ```
@@ -85,7 +85,6 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
    - Push each data point to `us-accidents-data-stream-1`.
 6. After implementing the Analytical and Real-time Layer, archive the Raw data to S3 as part of the Single Source of Truth (SSOT) process.
 
-![raw_layer](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/raw_layer.png)
 
 ### Steps in Analytical Layer
 1. Test the Flink application using the provided SQL or Python code.
