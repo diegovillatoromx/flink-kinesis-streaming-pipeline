@@ -131,6 +131,36 @@ As part of our data processing architecture, we have configured a database in AW
 
 As part of our real-time data processing architecture, we are setting up an Amazon Kinesis Analytics job to transform data from the first Kinesis data stream (`'us-accidents-data-stream-1'`) to the second Kinesis data stream (`'us-accidents-data-stream-2'`). This job will play a crucial role in processing and enriching data on-the-fly. Here are the steps to create this Kinesis Analytics job:
 
+##### Create an Studio Notebook
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/1studio_notebook.png)
+##### To give a name
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/2name.png)
+##### Then, to create a database on glue
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/3databaseglue.png)
+##### To include sources with IAM polices
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/4sources.png)
+###### To choose kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/4.1sources.png)
+###### To save changes
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/4.2sources.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/5destinations.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/5.1sources.png)
+###### To choose kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/5.2sources.png)
+##### To browse destinations on s3 bucket
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/6bucket.png)
+###### To choose s3 bucket destination
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/6.1bucket.png)
+##### To choose the role associated to analytics kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/7roles.png)
+###### To attach policies to the role
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/7.1roles.png)
+###### To check policies to the role
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/7.2.png)
+
+
 
 
 1. Test the Flink application using the provided SQL or Python code.
