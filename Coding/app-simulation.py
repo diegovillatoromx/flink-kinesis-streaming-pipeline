@@ -5,16 +5,15 @@ import dateutil.parser as parser
 from time import sleep
 from datetime import datetime
 
-
-# AWS Settings
-s3 = boto3.client('s3', region_name = 'eu-west-1')
-s3_resource = boto3.resource('s3', region_name = 'eu-west-1')
-kinesis_client = boto3.client('kinesis', region_name='eu-west-1')
-
 # Env. variables; i.e. can be OS variables in Lambda
 kinesis_stream_name = 'us-accidents-data-stream-1'
 streaming_partition_key = 'Severity'
+region_name = 'us-east-1'
 
+# AWS Settings
+s3 = boto3.client('s3', region_name = region_name)
+s3_resource = boto3.resource('s3', region_name = region_name)
+kinesis_client = boto3.client('kinesis', region_name=region_name)
 
 # Function can be converted to Lambda; 
 #   i.e. by iterating the S3-put events records; e.g. record['s3']['bucket']['name']
@@ -61,4 +60,4 @@ def stream_data_simulator(input_s3_bucket, input_s3_key):
 
 # Run stream:
 for i in range(0, 3):
-  stream_data_simulator(input_s3_bucket="us-accidents-raw-euwest1-143176-dev", input_s3_key="raw_us_accidents_sample/US_Accidents_Dec20_updated_sample.csv")
+  stream_data_simulator(input_s3_bucket="us-accidents-dataset-useast1-dev", input_s3_key="raw_us_accidents_dataset/US_Accidents_dataset.csv")
