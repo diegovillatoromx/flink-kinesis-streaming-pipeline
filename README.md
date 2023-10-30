@@ -59,16 +59,23 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
 ## Methodology 
 
 ### Steps in Raw-Layer
-1. Create an S3 bucket.
-2. Upload the RAW data file to S3. 
-3. Create a Data Stream named `us-accidents-data-stream-1`.
-4. Setup a Cloud9 environment and run the simulation Code:
+1. Creating an S3 bucket with data
+   ```
+   📂 us-accidents-dataset-useast1-dev
+      |_📂 raw_us_accidents_dataset
+         |_📜 us_accidents_dataset.csv
+   ```
+
+   
+3. Upload the RAW data file to S3. 
+4. Create a Data Stream named `us-accidents-data-stream-1`.
+5. Setup a Cloud9 environment and run the simulation Code:
    - Read the file from S3.
    - Convert each row to JSON.
    - Typecast strings to Datetime objects.
    - Add a Transaction Timestamp (`Txn_Timestamp`).
    - Push each data point to `us-accidents-data-stream-1`.
-5. After implementing the Analytical and Real-time Layer, archive the Raw data to S3 as part of the Single Source of Truth (SSOT) process.
+6. After implementing the Analytical and Real-time Layer, archive the Raw data to S3 as part of the Single Source of Truth (SSOT) process.
 
 ![raw_layer](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/raw_layer.png)
 
