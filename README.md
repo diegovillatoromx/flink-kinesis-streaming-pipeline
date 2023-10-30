@@ -69,7 +69,13 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
    ```terminal
    aws s3 cp <local-file-path> s3://us-accidents-dataset-useast1-dev/raw_us_accidents_dataset/
    ```
-4. Create a Data Stream named `us-accidents-data-stream-1`.
+3. To create a Data Stream named `us-accidents-data-stream-1` do the following:
+   - Inside the AWS Console, click on the "Kinesis" tab.
+   - Create the Data Stream:
+     - Name: `us-accidents-data-stream-1`
+     - Capacity Mode: `On-demand`
+     - Data Retention Period: `1 day`
+
 5. Setup a Cloud9 environment and run the simulation Code:
    - Read the file from S3.
    - Convert each row to JSON.
