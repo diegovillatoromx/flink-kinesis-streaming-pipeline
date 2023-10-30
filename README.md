@@ -92,12 +92,11 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
 ### Steps in Analytical Layer
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/analytic_layer.png)
 
-# Amazon Kinesis Data Stream Configuration
+#### Amazon Kinesis Data Stream Configuration
+As part of our real-time data processing architecture, we have established an Amazon Kinesis Data Stream named `'us-accidents-data-stream-2'`. This data stream is designed to store and manage real-time transformed data originating from our data analytics application within Amazon Kinesis Analytics.
 ![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/data-streams-2.png))
 
-As part of our real-time data processing architecture, we have established an Amazon Kinesis Data Stream named `'us-accidents-data-stream-2'`. This data stream is designed to store and manage real-time transformed data originating from our data analytics application within Amazon Kinesis Analytics.
-
-## Configuration Details:
+##### Configuration Details:
 
 - **Name:** us-accidents-data-stream-2
 - **Capacity Mode:** On-demand
