@@ -70,6 +70,8 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
    ```terminal
    aws s3 cp <local-file-path> s3://us-accidents-dataset-useast1-dev/raw_us_accidents_dataset/
    ```
+   Make sure to replace `<local-file-path>` with the actual path to the downloaded dataset on your local machine. Once the file is copied to the S3 bucket, it will be accessible for further data processing and analysis within our AWS environment.
+
 3. To create a Data Stream named `us-accidents-data-stream-1` do the following:
    - Inside the AWS Console, click on the "Kinesis" tab.
    - Create the Data Stream:
