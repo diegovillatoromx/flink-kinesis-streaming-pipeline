@@ -91,6 +91,24 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
 
 ### Steps in Analytical Layer
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/analytic_layer.png)
+
+# Amazon Kinesis Data Stream Configuration
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/analytic_layer.png)
+
+As part of our real-time data processing architecture, we have established an Amazon Kinesis Data Stream named 'us-accidents-data-stream-2'. This data stream is designed to store and manage real-time transformed data originating from our data analytics application within Amazon Kinesis Analytics.
+
+## Configuration Details:
+
+- **Name:** us-accidents-data-stream-2
+- **Capacity Mode:** On-demand
+- **Data Retention Period:** 1 day
+
+These settings allow us to efficiently maintain the data flow and manage processing capacity according to our requirements. The 1-day data retention period ensures that data remains available for analysis over a defined timeframe.
+
+This data stream plays a pivotal role in our architecture, enabling us to store and process real-time transformed data. It facilitates live analysis and provides valuable insights to make informed decisions within our business environment.
+
+You can use this text to document the setup of the 'us-accidents-data-stream-2' data stream in your project as an AWS data engineer. Feel free to customize it to meet your specific needs.
+
 1. Test the Flink application using the provided SQL or Python code.
 2. Build and deploy the Flink application in Kinesis Data Analytics (KDA).
 3. The Flink Application includes:
