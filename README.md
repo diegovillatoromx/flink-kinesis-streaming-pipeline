@@ -144,7 +144,7 @@ As part of our real-time data processing architecture, we are setting up an Amaz
 ###### To save changes
 ![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/4.2sources.png)
 ##### To include destinations with IAM policies
-![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/5destinations.png)
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/5destinatios.png)
 ###### To browse kinesis data-stream kinesis
 ![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/5.1sources.png)
 ###### To choose kinesis data-stream kinesis
