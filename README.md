@@ -43,7 +43,7 @@ In order to make this dataset accessible within our AWS environment, it's necess
 
 You can use the AWS Command Line Interface (CLI) to upload the file to the S3 bucket with the following command:
 ```terminal
-aws s3 cp <local-file-path> s3://us-accidents-raw-us_east_1-dev/raw_us-accidents/
+aws s3 cp <local-file-path> s3://us-accidents-dataset-useast1-dev/raw_us_accidents_dataset/
 ```
 Make sure to replace `<local-file-path>` with the actual path to the downloaded dataset on your local machine. Once the file is copied to the S3 bucket, it will be accessible for further data processing and analysis within our AWS environment.
 
