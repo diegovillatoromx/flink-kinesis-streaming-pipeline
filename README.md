@@ -76,7 +76,7 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
      - Capacity Mode: `On-demand`
      - Data Retention Period: `1 day`
 
-5. Setup a Cloud9 environment and run [the simulation Code]():
+5. Setup a Cloud9 environment and run [the simulation Code](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/Coding/app-simulation.py):
    - Read the file from S3.
    - Convert each row to JSON.
    - Typecast strings to Datetime objects.
