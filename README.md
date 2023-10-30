@@ -90,6 +90,7 @@ The dataset encompasses a range of variables, but our primary focus lies on a sp
 
 
 ### Steps in Analytical Layer
+![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/analytic_layer.png)
 1. Test the Flink application using the provided SQL or Python code.
 2. Build and deploy the Flink application in Kinesis Data Analytics (KDA).
 3. The Flink Application includes:
@@ -155,7 +156,7 @@ SELECT ID, Severity, City, County, Txn_Timestamp
 FROM us_accidents_stream
 WHERE Severity > 3;
 ```
-![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/analytic_layer.png)
+
 
 ### Steps in Real-Time Layer
 1. Read the stream in Lambda and deaggregate the records using Kinesis Producer Library (KPL) (loop-in the generator to start receiving records)
