@@ -195,7 +195,7 @@ PARTITIONED BY (Severity)
 WITH (
     'connector' = 'kinesis',
     'stream' = 'us-accidents-data-stream-1',
-    'aws.region' = 'eu-west-1',
+    'aws.region' = 'us-east-1',
     'scan.stream.initpos' = 'LATEST',
     'format' = 'json',
     'json.timestamp-format.standard' = 'ISO-8601'
@@ -215,7 +215,7 @@ PARTITIONED BY (Severity)
 WITH (
     'connector' = 'kinesis',
     'stream' = 'us-accidents-data-stream-2',
-    'aws.region' = 'eu-west-1',
+    'aws.region' = 'us-east-1',
     'format' = 'json',
     'json.timestamp-format.standard' = 'ISO-8601'
 );
@@ -223,7 +223,7 @@ WITH (
 ***Send only the selective data from 'us_accidents_stream' table to `'us_accidents_stream_1_results'` table***
 
 ```sql
-INSERT INTO us_accidents_stream_1_result6
+INSERT INTO us_accidents_stream_1_result
 SELECT ID, Severity, City, County, Txn_Timestamp
 FROM us_accidents_stream
 WHERE Severity > 3;
