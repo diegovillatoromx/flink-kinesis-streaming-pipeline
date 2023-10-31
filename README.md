@@ -253,7 +253,7 @@ Apache Flink is a robust stream processing framework that enables the developmen
 ##### To include destinations with IAM policies
 ![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/9tables.png)
 ##### To include destinations with IAM policies
-![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/10tablesproperties.png)
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/10tableproperties.png)
 
 
 
