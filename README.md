@@ -161,9 +161,7 @@ As part of our real-time data processing architecture, we are setting up an Amaz
 ![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_analytics/7.2.png)
 
 
-
-
-#### Test the Flink application using the provided SQL or Python code.
+#### Test the Flink application using the provided [SQL code](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/Coding/us-accidents-datapipeline_2JFAG2QSD.zpln). 
 ***Create a table to store data from the `'us-accidents-data-stream-1'` kinesis stream into the Glue database***
  ``` sql
 DROP TABLE IF EXISTS us_accidents_stream;
