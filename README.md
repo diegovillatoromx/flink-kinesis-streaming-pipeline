@@ -216,6 +216,49 @@ WHERE Severity > 3;
 ```
 
 #### Build and deploy the Flink application in Kinesis Data Analytics (KDA).
+Apache Flink is a robust stream processing framework that enables the development of real-time data processing applications. This guide outlines the steps to create an Apache Flink application.
+
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/1KDA.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/1.1KDA.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/1.2KDA.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/1.3KDA.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/2KDAdeploy.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/2.1KDAdeploy.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/2.2KDAdeployrole.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/2.3KDAdeploycreate.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/3KDArole.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/3.1KDAattach.png)
+###### To browse kinesis data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/3.2KDAattachpolicies.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/4KDArun.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/5KDAflink.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/6stream2.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/7monitoring.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/8database.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/9tables.png)
+##### To include destinations with IAM policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/10tablesproperties.png)
+
+
+
+
+
 
 ### Steps in Real-Time Layer
 1. Read the stream in Lambda and deaggregate the records using Kinesis Producer Library (KPL) (loop-in the generator to start receiving records)
