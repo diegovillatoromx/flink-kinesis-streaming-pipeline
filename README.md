@@ -163,19 +163,7 @@ As part of our real-time data processing architecture, we are setting up an Amaz
 
 
 
-1. Test the Flink application using the provided SQL or Python code.
-2. Build and deploy the Flink application in Kinesis Data Analytics (KDA).
-3. The Flink Application includes:
-   - Create a table in the Glue database and ingest the `'us-accidents-data-stream-1'` data via the Glue Catalog.
-   - Apply a watermark on `Txn_Timestamp` with a 5-second interval.
-   - Partition the data based on the `'Severity'` field.
-   - Create a second table for the Real-time layer by filtering the following fields and pushing them to `'us-accidents-data-stream-2'`:
-     * `ID`
-     * `Severity`
-     * `City`
-     * `County`
-     * `Txn_Timestamp`
-
+#### Test the Flink application using the provided SQL or Python code.
 ***Create a table to store data from the `'us-accidents-data-stream-1'` kinesis stream into the Glue database***
  ``` sql
 DROP TABLE IF EXISTS us_accidents_stream;
@@ -229,6 +217,7 @@ FROM us_accidents_stream
 WHERE Severity > 3;
 ```
 
+#### Build and deploy the Flink application in Kinesis Data Analytics (KDA).
 
 ### Steps in Real-Time Layer
 1. Read the stream in Lambda and deaggregate the records using Kinesis Producer Library (KPL) (loop-in the generator to start receiving records)
