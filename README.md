@@ -256,14 +256,10 @@ Apache Flink is a robust stream processing framework that enables the developmen
 ![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/10tableproperties.png)
 
 
-
-
-
-
 ### Steps in Real-Time Layer
 1. Read the stream in Lambda and deaggregate the records using Kinesis Producer Library (KPL) (loop-in the generator to start receiving records)
    ```terminal
-   pip install aws_kinesis_agg
+   pip install aws_kinesis_agg -t .
    ```
 2. Decode the data in Lambda as the event record data is `base64` encoded
 3. Create CloudWatch metrics for `‘Severity’`, `‘City’` and `‘County'`
