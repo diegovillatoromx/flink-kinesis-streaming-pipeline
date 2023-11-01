@@ -261,11 +261,19 @@ Apache Flink is a robust stream processing framework that enables the developmen
    ```terminal
    pip install aws_kinesis_agg -t .
    ```
-2. Decode the data in Lambda as the event record data is `base64` encoded
-3. Create CloudWatch metrics for `‘Severity’`, `‘City’` and `‘County'`
-4. Push the metrics to CloudWatch with a `Severity > 2`
-5. Create Grafana Dashboard for visualizing the data points
-6. Setup Email Notifications through AWS SNS to manage `severity > 4`
+2. The command `"zip -r ../lambda_function.zip"` is used to compress (zip) a directory or file into a ZIP file named `"lambda_function.zip."`
+  ```terminal
+   zip -r ../lambda_function.py
+   ```
+3. This command is used to copy the `'lambda_function.zip'` file to the specified path in your S3 bucket.
+   ```terminal
+   aws s3 cp lambda_function.zip s3://nombre-de-tu-bucket/carpeta/
+   ```
+5. Decode the data in Lambda as the event record data is `base64` encoded
+6. Create CloudWatch metrics for `‘Severity’`, `‘City’` and `‘County'`
+7. Push the metrics to CloudWatch with a `Severity > 2`
+8. Create Grafana Dashboard for visualizing the data points
+9. Setup Email Notifications through AWS SNS to manage `severity > 4`
 ![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
 
 ## Modular Code Overview
