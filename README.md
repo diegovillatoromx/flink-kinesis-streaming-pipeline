@@ -262,10 +262,10 @@ Apache Flink is a robust stream processing framework that enables the developmen
    pip install aws_kinesis_agg -t .
    ```
 2. The command `"zip -r ../lambda_function.zip"` is used to compress (zip) a directory or file into a ZIP file named `"lambda_function.zip."`
-  ```terminal
+   ```terminal
    zip -r ../lambda_function.py
    ```
-3. This command is used to copy the `'lambda_function.zip'` file to the specified path in your S3 bucket.
+4. This command is used to copy the `'lambda_function.zip'` file to the specified path in your S3 bucket.
    ```terminal
    aws s3 cp lambda_function.zip s3://nombre-de-tu-bucket/carpeta/
    ```
