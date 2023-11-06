@@ -271,11 +271,12 @@ The next step in our real-time architecture involves creating a Lambda function 
    ```terminal
    aws s3 cp lambda_function.zip s3://nombre-de-tu-bucket/carpeta/
    ```
-##### To include destinations with IAM policies
-![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/1KDA.png)
-###### To browse kinesis data-stream kinesis
-![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/KDA_images/1.1KDA.png)
-
+##### To create a lambda function
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1lambda_function.png)
+###### To add trigger data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.1lambda_function.png)
+###### To add trigger data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.1lambda_function.png)
 5. Decode the data in Lambda as the event record data is `base64` encoded
 6. Create CloudWatch metrics for `‘Severity’`, `‘City’` and `‘County'`
 7. Push the metrics to CloudWatch with a `Severity > 2`
