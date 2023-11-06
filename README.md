@@ -258,6 +258,7 @@ Apache Flink is a robust stream processing framework that enables the developmen
 
 ### Steps in Real-Time Layer
 The next step in our real-time architecture involves creating a Lambda function responsible for processing information and forwarding it to CloudWatch while generating notifications through SNS to our email address. It is worth noting that within the Lambda function, data must be decoded as the event record data is base64 encoded.
+![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
 
 1. Read the stream in Lambda and deaggregate the records using Kinesis Producer Library (KPL) (loop-in the generator to start receiving records)
    ```terminal
@@ -271,18 +272,47 @@ The next step in our real-time architecture involves creating a Lambda function 
    ```terminal
    aws s3 cp lambda_function.zip s3://nombre-de-tu-bucket/carpeta/
    ```
+5. Create CloudWatch metrics for `‘Severity’`, `‘City’` and `‘County'`
+6. Push the metrics to CloudWatch with a `Severity > 2`
+7. Create Grafana Dashboard for visualizing the data points
+8. Setup Email Notifications through AWS SNS to manage `severity > 4`
+
 ##### To create a lambda function
-![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1lambda_function.png)
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1lambdafunction.png)
 ###### To add trigger data-stream kinesis
-![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.1lambda_function.png)
-###### To add trigger data-stream kinesis
-![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.1lambda_function.png)
-5. Decode the data in Lambda as the event record data is `base64` encoded
-6. Create CloudWatch metrics for `‘Severity’`, `‘City’` and `‘County'`
-7. Push the metrics to CloudWatch with a `Severity > 2`
-8. Create Grafana Dashboard for visualizing the data points
-9. Setup Email Notifications through AWS SNS to manage `severity > 4`
-![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/real-time_layer.png)
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.1lambdafunction.png)
+###### To add the source of trigger data-stream kinesis
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.2lambdafunction.png)
+###### To modify the policies of IAMRole of lambda
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.3lambdafunction.png)
+###### To attach policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.4lambdafunction.png)
+###### The permission policies
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.5lambdafunction.png)
+###### The enviroment variables
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.6lambdafunction.png)
+###### To configure the test event
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.7lambdafunction.png)
+###### To decode the data in Lambda as the event record data is `base64` encoded
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.7lambdafunction.png)
+
+
+##### To create sns notification
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/2sns.png)
+###### To details to sns 
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/2.1sns.png)
+###### To add subscription to sns 
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/2.2sns.png)
+###### To create subscription to sns 
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/2.1sns.png)
+##### To create sns notification
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/2sns.png)
+###### To details to sns 
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/2.1sns.png)
+##### To add the last enviroment variables
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/3lambdafunction.png)
+###### To add the arn created on sns to lambda function
+![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/3.1lambdafunction.png)
 
 ## Modular Code Overview
 This project is organized into modules and includes various code files and scripts to support its functionality. 
