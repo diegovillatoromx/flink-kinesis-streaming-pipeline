@@ -15,7 +15,6 @@ Data Engineering AWS played a vital role in the process. The US-Accidents databa
 - [Adding Policies to the Associated EC2 Instance](#Adding-Policies-to-the-Associated-EC2-Instance)
 - [Setting up the enviroment](#setting-up-the-enviroment)
 - [Cloning GitHub repository to AWS Cloud9](#Cloning-GitHub-repository-to-AWS-Cloud9)
-- [Usage](#usage) 
 - [Contribution](#contribution)
 - [Contact](#contact)
 
