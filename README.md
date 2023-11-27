@@ -275,7 +275,7 @@ The next step in our real-time architecture involves creating a Lambda function 
 7. Create Grafana Dashboard for visualizing the data points
 8. Setup Email Notifications through AWS SNS to manage `severity > 4`
 
-##### To create a lambda function
+##### To create a lambda function 
 ![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1lambdafunction.png)
 ###### To add trigger data-stream kinesis
 ![image](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images_real_time/1.1lambdafunction.png)
