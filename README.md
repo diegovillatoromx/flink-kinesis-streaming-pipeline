@@ -6,7 +6,7 @@ Data Engineering AWS played a vital role in the process. The US-Accidents databa
 
 ## Table of Contents 
 
-- [Description](#description)
+- [Description](#description) 
 - [Architecture](#architecture)
 - [Dataset](#Dataset)
 - [Methodology](#Methodology)
