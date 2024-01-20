@@ -1,5 +1,5 @@
 ﻿{
-  "paragraphs": [
+  "paragraphs": [ 
     {
       "text": "%md\n#### Data pipeline: Kinesis Stream --> KDA and Apache Flink --> Kinesis Stream",
       "user": "anonymous",
