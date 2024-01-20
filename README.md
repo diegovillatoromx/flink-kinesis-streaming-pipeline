@@ -29,7 +29,7 @@ Furthermore, Amazon Athena, a query service, will be used to analyze the transfo
 
 ## Architecture
 
-![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/flink_kinesis.png)
+![diagram](https://github.com/diegovillatoromx/flink-kinesis-streaming-pipeline/blob/main/images/flink_kinesis.png) 
 
 ## Dataset
 
