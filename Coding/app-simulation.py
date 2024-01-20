@@ -3,7 +3,7 @@ import csv
 import json
 import dateutil.parser as parser
 from time import sleep
-from datetime import datetime
+from datetime import datetime 
 
 # Env. variables; i.e. can be OS variables in Lambda
 kinesis_stream_name = 'us-accidents-data-stream-1'
