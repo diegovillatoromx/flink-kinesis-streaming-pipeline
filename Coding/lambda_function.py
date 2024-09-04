@@ -2,7 +2,7 @@ from __future__ import print_function
 from aws_kinesis_agg.deaggregator import iter_deaggregate_records
 import base64
 import json
-import boto3
+import boto3 
 import os
 
 # OS input variables:
