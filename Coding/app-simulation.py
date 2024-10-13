@@ -1,5 +1,5 @@
 import boto3 
-import csv 
+import csv  
 import json
 import dateutil.parser as parser
 from time import sleep
