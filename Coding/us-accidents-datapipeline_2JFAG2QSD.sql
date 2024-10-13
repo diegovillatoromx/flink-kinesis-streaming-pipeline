@@ -1,5 +1,5 @@
 %flink.ssql
-  
+   
 /* Opción 'IF NOT EXISTS' puede usarse para proteger el esquema existente */
 DROP TABLE IF EXISTS us_accidents_stream;
 
