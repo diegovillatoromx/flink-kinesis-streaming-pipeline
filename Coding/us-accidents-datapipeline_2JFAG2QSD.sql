@@ -2,7 +2,7 @@
    
 /* Opción 'IF NOT EXISTS' puede usarse para proteger el esquema existente */
 DROP TABLE IF EXISTS us_accidents_stream;
-
+ 
 CREATE TABLE us_accidents_stream (
   `ID` VARCHAR(50), 
   `Severity` BIGINT, 
