@@ -1,7 +1,7 @@
 import boto3 
 import csv  
 import json 
-import dateutil.parser as parser
+import dateutil.parser as parser 
 from time import sleep
 from datetime import datetime 
 
